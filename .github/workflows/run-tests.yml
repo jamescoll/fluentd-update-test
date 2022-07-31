@@ -25,6 +25,7 @@ jobs:
           sudo snap install microk8s --classic --channel=latest/edge
           sudo microk8s status --wait-ready --timeout 600
           sudo microk8s addons repo add testing .
+          ls /var/snap/microk8s/common/addons
           sudo chmod +x /var/snap/microk8s/common/addons/testing/addons/fluentd/enable
           sudo chmod +x /var/snap/microk8s/common/addons/testing/addons/fluentd/disable
           sudo pytest -s ./tests/test-addons.py
