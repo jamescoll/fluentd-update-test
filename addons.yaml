@@ -1,19 +1,9 @@
 microk8s-addons:
-  description: "My awesome demo repository."
-  addons:
-    - name: "python-hello-k8s"
-      description: "Demo addon implemented in python"
-      version: "1.0.0"
-      check_status: "deployment.apps/python-demo-nginx"
-      supported_architectures:
-        - arm64
-        - amd64
-
-    - name: "bash-hello-k8s"
-      description: "Bash based demo addon"
-      version: "1.0.0"
-      check_status: "deployment.apps/bash-demo-nginx"
+  description: "Fluentd plugin test repository."
+  addons:       
+    - name: "fluentd"
+      description: "Elasticsearch-Fluentd-Kibana logging and monitoring"
+      version: "3.1.0"
+      check_status: "daemonset.apps/fluentd-es-v3.1.0"
       supported_architectures:
         - amd64
-        - arm64
-        - s390x
