@@ -38,12 +38,3 @@ def test_fluentd(self):
         validate_fluentd()
         print("Disabling fluentd")
         microk8s_disable("fluentd")
-
-    @pytest.mark.skipif(
-        os.environ.get("STRICT") == "yes",
-        reason="Skipping cilium tests in strict confinement as they are expected to fail",
-    )
-    #@pytest.mark.skipif(
-    #    platform.machine() != "x86_64",
-    #    reason="Cilium tests are only relevant in x86 architectures",*/
-    )
